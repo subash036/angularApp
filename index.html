@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>My Angular App!</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+
+  </head>
+  <body ng-app="MasalaApp">
+    <div class="container" ng-controller="mainController">
+      <h2>Masalas & Spices ({{content.length}})</h2>
+      <div class="container-left">
+        <div class="grids" ng-repeat="item in content">
+          <img ng-src="images/{{item.imgBrand}}" alt="">
+          <h5>{{item.brandName}}</h5>
+          <h3>{{item.productName}}</h3>
+          <p>{{item.packingDetails}}</p>
+          <span>{{item.price | currency }}</span>
+          <button ng-if="item.cart_count==null || item.cart_count<=0" ng-click="addToCart(item,$index)">Add to cart</button>
+          <div ng-if="item.cart_count>0" class="add-remove-container">
+            <ul>
+                <li ng-click="removeFromCart(item,$index)">-</li>
+                <li>{{item.cart_count}} in cart</li>
+                <li ng-click="addToCart(item,$index)">+</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container-right">
+        <div class="cart-summery">
+          <div class="cart">
+            <p>Items in cart</p>
+            <span>{{total_cart_count | number}}</span>
+          </div>
+          <div class="total">
+            <p>Total Rs</p>
+            <span>{{total_cart_amount | currency}}</span>
+          </div>
+          <hr>
+          <ul class="heading">
+              <li>Item</li>
+              <li>Quantity</li>
+              <li>Total Rs</li>
+              <li></li>
+          </ul>
+          <div class="clear-both"></div>
+          <ul class="item-list" ng-repeat="citem in content" ng-show="citem.cart_count>0">
+              <li>{{citem.brandName}}</li>
+              <li>{{citem.cart_count}}</li>
+              <li>{{citem.cart_total}}</li>
+              <li><button ng-click="removeAllFromCart(citem,$index)">Remove</button></li>
+          </ul>
+           <div class="clear-both"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/service.js"></script>
+  </body>
+</html>

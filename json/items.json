@@ -1,0 +1,44 @@
+[
+  {
+    "imgBrand": "img-1.jpg",
+    "brandName": "name 1",
+    "productName": "f82746c0-3df9-4373-8418-4c096f1f1503",
+    "packingDetails": true,
+    "price": "2179.51"
+  },
+  {
+    "imgBrand": "img-1.jpg",
+    "brandName": "name 2",
+    "productName": "69c1c3ee-d899-461d-8581-b9a92cdecd00",
+    "packingDetails": true,
+    "price": "3456.22"
+  },
+  {
+    "imgBrand": "img-1.jpg",
+    "brandName": "name 3",
+    "productName": "68623e1f-0dca-45ab-97da-73e4a83d2506",
+    "packingDetails": false,
+    "price": "1439.44"
+  },
+  {
+    "imgBrand": "img-1.jpg",
+    "brandName": "name 4",
+    "productName": "d3a1e745-2c5b-423e-9dc7-3d134b4735a5",
+    "packingDetails": false,
+    "price": "3038.31"
+  },
+  {
+    "imgBrand": "img-1.jpg",
+    "brandName": "name 5",
+    "productName": "5551a10b-b0d6-4191-bc4d-79bcea81a20a",
+    "packingDetails": true,
+    "price": "3715.93"
+  },
+  {
+    "imgBrand": "img-1.jpg",
+    "brandName": "name 6",
+    "productName": "ebe52553-1cfc-4541-b8c4-750b477c5996",
+    "packingDetails": true,
+    "price": "3483.74"
+  }
+]

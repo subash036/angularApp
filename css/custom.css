@@ -1,0 +1,203 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.container h2{
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+.clear-both{
+	clear: both;
+}
+.container{
+	width: 90%;
+	padding: 5%;
+	padding-top: 25px;
+}
+.container .container-left{
+	float: left;
+	width: 75%;
+
+}
+.container .container-right{
+	float: right;
+	clear: right;
+	width: 25%;
+}
+.container .container-left .grids{
+	float: left;
+	width: 19%;
+	padding: 20px;
+	margin-right: 1%;
+	text-align: center;
+	box-shadow: 2px 2px 2px 2px #ddd;
+	margin-top: 0px;
+	margin-bottom: 20px;
+}
+.container .container-left .grids img{
+	display: block;
+	width: 100%;
+	height: auto;
+	max-height: 100px;
+}
+.container .container-left .grids h5{
+	font-size: 14px;
+	line-height: 1.2;
+	padding: 10px 0 0;
+}
+.container .container-left .grids h3{
+	font-size: 16px;
+	line-height: 1.2;
+	padding: 0px 0 15px;
+}
+.container .container-left .grids p{
+	font-size: 14px;
+	line-height: 1.2;
+	padding: 0px 0 15px;
+}
+.container .container-left .grids span{
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+}
+.container .container-left .grids button{
+	display: block;
+	width: auto;
+	border: solid 1px #ddd;
+	border-radius: 2px;
+	padding: 5px 10px;
+	font-size: 12px;
+	margin: 15px auto 0;
+	background-color: #fff;
+	cursor: pointer;
+}
+.cart-summery{
+	padding: 5px;
+	box-shadow: 2px 2px 2px 2px #ddd;
+}
+.cart-summery .cart{
+	text-align: center;
+	float: left;
+	margin-bottom: 20px;
+	padding-left: 30px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+.cart-summery .cart span,.cart-summery .total span{
+	display: block;
+	margin-top: 10px;
+}
+.cart-summery .total{
+	text-align: center;
+	float: right;
+	margin-bottom: 20px;
+	padding-right: 30px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+.cart-summery hr{
+	clear: both;
+	display: block;
+	margin-top: 20px;
+}
+.cart-summery ul{
+	display: block;
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-top: 15px;
+	width: 100%;
+	list-style-type: none;
+	clear: both;
+}
+.cart-summery ul li{
+	float: left;
+	padding: 5px;
+	margin-right: 15px;
+	font-size: 14px;
+	position: relative;
+	text-align: right;
+	min-width: 40px;
+
+}
+.cart-summery ul li:last-child{
+	margin-right: 0px;
+}
+.cart-summery ul :first-child li{
+	text-align: left;
+}
+.cart-summery ul li button{
+	display: block;
+	width: auto;
+	border: solid 1px #ddd;
+	border-radius: 2px;
+	padding: 5px 5px;
+	font-size: 12px;
+	background-color: #fff;
+	position: relative;
+	cursor: pointer;
+	top:-5;
+	left: 0;
+}
+.add-remove-container ul{
+	margin: 13px auto;
+	text-align: center;
+	width: 100%;
+}
+.add-remove-container ul li{
+	float: left;
+	padding: 5px 4px;
+	border: solid 1px #ddd;
+	cursor: pointer;
+	text-align: center;
+	width: 22%
+}
+.add-remove-container ul li:nth-child(2){
+	width: 38%;
+	border-right: solid 0px #ddd;
+	border-left: solid 0px #ddd;
+	cursor: default;
+}
