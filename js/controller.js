@@ -21,6 +21,7 @@ app.controller("mainController",function($scope,getItemList){
 
 	 // =========local space for totla count and amout list==========
 	 $scope.addToCart=function(thisItem,index){
+	 	thisItem.price=Math.ceil(thisItem.price);
 	 	if($scope.content[index].cart_count == null){
 	 		$scope.content[index].cart_count=0;
 	 		$scope.content[index].cart_total=0;
@@ -30,7 +31,7 @@ app.controller("mainController",function($scope,getItemList){
 	 			$scope.total_cart_count=parseFloat($scope.total_cart_count)+1;
 	 			$scope.total_cart_amount=parseFloat($scope.total_cart_amount)+parseFloat(thisItem.price);
 	 			$scope.content[item].cart_count+=1;
-	 			$scope.content[item].cart_total=Math.ceil($scope.content[item].cart_count*parseFloat(thisItem.price));
+	 			$scope.content[item].cart_total=$scope.content[item].cart_count*parseFloat(thisItem.price);
 	 		}
 	 	}
 	 	console.log($scope.content[index].cart_count);
@@ -39,6 +40,7 @@ app.controller("mainController",function($scope,getItemList){
 		sessionStorage.setItem("total_cart_amount",$scope.total_cart_amount);
 	 };
 	 $scope.removeFromCart=function(thisItem,index){
+	 	thisItem.price=Math.ceil(thisItem.price);
 	 	if($scope.content[index].cart_count <= 0){
 	 		$scope.content[index].cart_count=0;
 	 		$scope.content[index].cart_total=0;
@@ -57,6 +59,7 @@ app.controller("mainController",function($scope,getItemList){
 		sessionStorage.setItem("total_cart_amount",$scope.total_cart_amount);
 	 };
 	 $scope.removeAllFromCart=function(thisItem,index){
+	 	thisItem.price=Math.ceil(thisItem.price);
 	 	for(var item in $scope.content){
 	 		if(index == item){
 	 			$scope.total_cart_count=parseFloat($scope.total_cart_count)-thisItem.cart_count;

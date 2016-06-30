@@ -46,7 +46,7 @@
           <ul class="item-list" ng-repeat="citem in content" ng-show="citem.cart_count>0">
               <li>{{citem.brandName}}</li>
               <li>{{citem.cart_count}}</li>
-              <li>{{citem.cart_total}}</li>
+              <li>{{citem.cart_total | currency}}</li>
               <li><button ng-click="removeAllFromCart(citem,$index)">Remove</button></li>
           </ul>
            <div class="clear-both"></div>
